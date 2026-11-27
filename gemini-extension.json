@@ -1,0 +1,12 @@
+{
+  "name": "locksmith-pack",
+  "version": "1.0.0",
+  "description": "Lockout quotes, insurer lock checks, entry rules and car key quotes for UK locksmiths' AI",
+  "mcpServers": {
+    "locksmith-pack": {
+      "httpUrl": "https://locksmith-pack.nerolabs.workers.dev/mcp",
+      "timeout": 30000
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
