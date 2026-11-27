@@ -1,5 +1,7 @@
 # Locksmith Pack
 
+[![Locksmith Pack MCP connector](https://glama.ai/mcp/connectors/io.github.Nero-Engine/locksmith-pack/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.Nero-Engine/locksmith-pack)
+
 Free tools a UK locksmith's AI assistant uses on the job: lockout and lock change quotes with call out and out of hours rates, BS 3621 and anti snap checks against what home insurers usually ask for, priced security upgrade plans, who a locksmith may let in and what to record, and car key quotes.
 
 **Endpoint:** `https://locksmith-pack.nerolabs.workers.dev/mcp` (MCP, Streamable HTTP)
