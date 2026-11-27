@@ -1,7 +1,5 @@
 # Locksmith Pack
 
-[![Locksmith Pack MCP connector](https://glama.ai/mcp/connectors/io.github.Nero-Engine/locksmith-pack/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.Nero-Engine/locksmith-pack)
-
 Free tools a UK locksmith's AI assistant uses on the job: lockout and lock change quotes with call out and out of hours rates, BS 3621 and anti snap checks against what home insurers usually ask for, priced security upgrade plans, who a locksmith may let in and what to record, and car key quotes.
 
 **Endpoint:** `https://locksmith-pack.nerolabs.workers.dev/mcp` (MCP, Streamable HTTP)
@@ -20,6 +18,7 @@ Free tools a UK locksmith's AI assistant uses on the job: lockout and lock chang
 | `security_upgrade_plan` | Priced home security upgrade plan. Checks every door with lock_standard_check, adds window locks and optional extras (letterbox guard, door limiter, door viewer, smart lock), and prices the whole upgrade in one visit: tasks merged, hours, parts, labour, minimum charge, margin and VAT, with t... |
 | `access_and_entry_rules` | May I open this door? Entry and lock change rules. Before opening a door or changing locks for someone, returns a verdict (go, go_with_checks or stop), the checks to make, the record to keep, what to say, and the law, in plain words. |
 | `car_key_quote` | Car key quote for auto locksmiths. Prices a car key: key type (basic_metal, transponder, remote, flip_remote, proximity_smart), spare or all keys lost, premium make (x1.4), quantity, mobile call out, blank cost plus markup and programming time, with a range and the checks: V5C and ID before ... |
+| `area_crime_check` | Live police recorded burglary and vehicle crime near a postcode. Looks up, live from data.police.uk, the latest month of street level crime within about a mile of the customer's postcode: burglary and vehicle crime counts, every category, the streets with the most burglaries, the month, the council and nation, plus a bur... |
 | `trade_profile` | Check the locksmith's business details. Checks the locksmith's own details (Nero Trade Profile v1: trading name, Companies House number, trade body or scheme and number such as the Master Locksmiths Association, postcode, contact, Nero Work services) and returns them cleaned, with a stable `nero_... |
 
 Every tool carries a plain title and the read-only, destructive and open-world hints, so your AI app can ask before anything that changes data.
@@ -36,8 +35,6 @@ The server also serves ready playbooks over the MCP Skills extension (`skills/li
 - **Claude (web or desktop):** Settings, Connectors, Add custom connector, paste the endpoint.
 - **ChatGPT:** Settings, Apps and connectors, Advanced settings, switch on Developer mode, then Create, paste the endpoint, No authentication.
 - **Claude Code:** `claude mcp add --transport http locksmith-pack https://locksmith-pack.nerolabs.workers.dev/mcp`
-- **Cline:** add `"locksmith-pack": { "type": "streamableHttp", "url": "https://locksmith-pack.nerolabs.workers.dev/mcp" }` under `mcpServers` in cline_mcp_settings.json (see llms-install.md).
-- **Gemini CLI:** `gemini extensions install https://github.com/Nero-Engine/locksmith-pack-mcp`
 - **Cursor, VS Code, Windsurf and others:**
 
 ```json
